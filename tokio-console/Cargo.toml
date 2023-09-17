@@ -28,25 +28,25 @@ keywords = [
 
 [dependencies]
 atty = "0.2"
-console-api = { version = "0.5.0", path = "../console-api", features = ["transport"] }
 clap = { version = "3", features = ["cargo", "derive", "env"] }
-tokio = { version = "1", features = ["full", "rt-multi-thread"] }
-tonic = { version = "0.10", features = ["transport"] }
+clap_complete = "3"
+color-eyre = { version = "0.6", features = ["issue-url"] }
+console-api = { version = "0.5.0", path = "../console-api", features = ["transport"] }
+crossterm = { version = "0.26.1", features = ["event-stream"] }
+dirs = "4"
 futures = "0.3"
+h2 = "0.3"
+hdrhistogram = { version = "7.3.0", default-features = false, features = ["serialization"] }
+humantime = "2.1.0"
+once_cell = "1.8"
+prost-types = "0.12"
 ratatui = { version = "0.20.1", default-features = false, features = ["crossterm"] }
+regex = "1.5"
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["full", "rt-multi-thread"] }
+toml = "0.5"
+tonic = { version = "0.10", features = ["transport"] }
 tower = "0.4.12"
 tracing = "0.1"
-tracing-subscriber = { version = "0.3.0", features = ["env-filter"] }
 tracing-journald = { version = "0.2", optional = true }
-prost-types = "0.12"
-crossterm = { version = "0.26.1", features = ["event-stream"] }
-color-eyre = { version = "0.6", features = ["issue-url"] }
-hdrhistogram = { version = "7.3.0", default-features = false, features = ["serialization"] }
-h2 = "0.3"
-regex = "1.5"
-once_cell = "1.8"
-humantime = "2.1.0"
-serde = { version = "1", features = ["derive"] }
-toml = "0.5"
-dirs = "4"
-clap_complete = "3"
+tracing-subscriber = { version = "0.3.0", features = ["env-filter"] }
